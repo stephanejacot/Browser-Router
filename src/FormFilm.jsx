@@ -52,6 +52,7 @@ submitForm(e) {
                         type="text"
                         id="name"
                         name="name"
+                        required
                         onChange={this.onChange}
                         value={this.state.name}
                      />
@@ -59,22 +60,26 @@ submitForm(e) {
                   <div className="form-data">
                      <label htmlFor="poster">Poster</label>
                      <input
-                        type="text"
+                        type="url"
                         id="poster"
                         name="poster"
+                        pattern="https://.*" size="30"
+                        required
                         onChange={this.onChange}
                         value={this.state.poster}
                      />
                   </div>
                   <div className="form-data">
-                  <label htmlFor="comment">comment</label>
-                     <input
-                        type="textarea"
+                  <label for="comment">pourquoi tu aimes ce film? qu'est-ce qui t'a marqué? etc.</label>
+                     <textarea
+            
                         id="comment"
                         name="comment"
+                        rows="5" cols="33"
+                        required
                         onChange={this.onChange}
                         value={this.state.comment}
-                     />
+                        />
                   </div>
                   <hr />
                   <div className="form-data">
